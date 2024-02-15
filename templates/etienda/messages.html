@@ -1,0 +1,11 @@
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-success" role="alert" >
+    <symbol id="check-circle-fill" viewBox="0 0 16 16"></symbol>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+<head>
+    <h2>Resultados de la búsqueda: "{{ busqueda }}"</h2>
+</head>
+<ul class="list-group">
+    {% for producto in resultados %}
+        <li class="list-group-item list-group-item-primary"><img src="{%static producto.imágen %}" style="width: 279px; height: 150px;"> {{ producto.nombre }} - Precio: {{ producto.precio }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{%url 'index'%}" class="btn btn-primary">Volver a la Portada</a>
+{%endblock%}

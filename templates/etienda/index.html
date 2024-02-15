@@ -1,0 +1,44 @@
+<html>
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block contenido %}
+    <div class="card-group">
+        <div class="card text-bg-secondary w-50" aria-hidden="true">
+            <img src="{% static '/etienda/hombre.jpg' %}" class="card-img-top" alt="Ropa de Hombre" style="width: 279px; height: 150px;">
+            <div class="card-body">
+            <h5 class="card-title placeholder-glow">Ropa de Hombre</h5>
+            <p class="card-text">Ropa y zapatos de caballero en toda nuestra tienda</p>
+            <a href="/etienda/busq_cat/Ropa de Hombre" class="btn btn-outline-light">Artículos de Hombre</a>
+            </div>
+        </div>
+
+        <div class="card text-bg-secondary w-50" aria-hidden="true">
+            <img src="{% static '/etienda/ropamujer.jpg' %}" class="card-img-top" alt="Ropa de Mujer" style="width: 279px; height: 150px;">
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">Ropa de Mujer</h5>
+                <p class="card-text">Ropa y zapatos de mujer en toda nuestra tienda</p>
+                <a href="/etienda/busq_cat/Ropa de Mujer" class="btn btn-outline-light">Artículos de Mujer</a>
+            </div>
+        </div>
+
+        <div class="card text-bg-secondary w-50" aria-hidden="true">
+            <img src="{% static '/etienda/joyas.jpg' %}" class="card-img-top" alt="Joyería" style="width: 279px; height: 150px;">
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">Joyería</h5>
+                <p class="card-text">Pendientes, collares, anillos y otros artículos de joyería en toda nuestra tienda</p>
+                <a href="/etienda/busq_cat/Joyas" class="btn btn-outline-light">Artículos de joyería</a>
+            </div>
+        </div>
+
+        <div class="card text-bg-secondary w-50" aria-hidden="true">
+            <img src="{% static '/etienda/electronica.jpg' %}" class="card-img-top" alt="Electrónica" style="width: 279px; height: 150px;">
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">Electrónica</h5>
+                <p class="card-text">Cámaras, impresoras, móviles y otros artículos electrónicos en toda nuestra tienda</p>
+                <a href="/etienda/busq_cat/Electronica" class="btn btn-outline-light">Artículos Electrónicos</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría</title>
+</head>
+<body>
+    <h2>Productos en la categoría: {{ categoria }}</h2>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <h3>{{ producto.nombre }}</h3>
+                <img src="{%static producto.imágen %}" style="width: 279px; height: 150px;">
+                <p>Precio: {{ producto.precio }}</p>
+                <p>Descripción: {{ producto.descripción }}</p>
+                <!--<span class="sp" data-rating="{{ producto.id }}"></span>-->
+                <span class="sp" data-rating="3.5"></span>
+
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{%url 'index'%}" class="btn btn-primary">Volver a la Portada</a>
+</body>
+{%endblock%}
